@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>React Local</title>
+
+  <script type="application/javascript" src="./scripts/react.production.min.js"></script>
+  <script type="application/javascript" src="./scripts/react-dom.production.min.js"></script>
+  <script type="application/javascript" src="./scripts/babel.js"></script>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+
+// ==============================
+// = THESE ARE EXAMPLES, THE 
+// = EXERCISES START ON LINE 124
+// ==============================
+
+
+// ==============================
+// ======= QUOTEMAKER.JS ========
+// ==============================
+
+
+// class QuoteMaker extends React.Component {
+//   render() {
+//     return (
+//       <blockquote>
+//         <p>
+//           The world is full of objects, more or less interesting; I do not wish to add any more.
+//         </p>
+//         <cite>
+//           <a target="_blank"
+//             href="https://en.wikipedia.org/wiki/Douglas_Huebler">
+//             Douglas Huebler
+//           </a>
+//         </cite>
+//       </blockquote>
+//     );
+//   }
+// };
+
+// ReactDOM.render(
+//   <QuoteMaker />,
+//   document.getElementById('app')
+// );
+
+
+
+// ==============================
+// =======  REDPANDA.JS =========
+// ==============================
+
+
+
+// const redPanda = {
+//   src: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Endangered_Red_Panda.jpg',
+//   alt: 'Red Panda',
+//   width:  '200px'
+// };
+
+// class RedPanda extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//         <h1>Cute Red Panda</h1>
+//         <img 
+//           src={redPanda.src}
+//           alt={redPanda.alt}
+//           width={redPanda.width} />
+//       </div>
+//     );
+//   }
+// }
+
+// ReactDOM.render(
+//   <RedPanda />,
+//   document.getElementById('app')
+// );
+
+
+// ==============================
+// ======= TODAY'SPLAN.JS =======  
+// ==============================
+
+
+
+// class TodaysPlan extends React.Component {
+//   render() {
+//     let task;
+//     if (!apocalypse) {
+//       task = 'learn React.js'
+//     } else {
+//       task = 'run around'
+//     }
+
+//     return <h1>Today I am going to {task}!</h1>;
+//   }
+// }
+
+// ReactDOM.render(
+//   <TodaysPlan />,
+//   document.getElementById('app')
+// );
+
+  </script>
+
+  <div id="root"></div>
+  <span id="container"></span>
+  <main id="app"></main>
+  <main id="1app"></main>
+  <main id="2app"></main>
+  <main id="3app"></main>
+  <main id="4app"></main>
+
+<script type="text/babel">
+
+// ===============================================
+// ======== Use Multiline JSX in a Component =====
+// ===============================================
+
+
+  //class Quote extends React.Component {
+  // render() {
+     //return (
+       //<blockquote>
+         //<p>
+         //What is important now is to 
+         //recover our senses.
+         //</p>
+         //<cite>
+           //<a target="_blank"
+             //href="https:
+             //en.wikipedia.org/wiki/
+             //Susan_Sontag">
+           //  Susan Sontag
+          // </a>
+         //</cite>
+       //</blockquote>
+     //);
+   //}
+   //}
+   //ReactDOM.render(<Quote />, 
+   //document.getElementById('app'))
+
+
+// ===============================================
+// ======== Use a Variable Attribute in a Component
+// ===============================================
+
+
+  //const owl = {
+   //  title: 'Excellent Owl',
+   //  src: './goose.png'
+  // };
+   //Component class starts here
+//class Owl extends React.Component {
+   //render() {
+   // return (
+      //<div>
+        //<h1>{owl.title}</h1>
+       // <img 
+        //   src={owl.src}
+         // alt={owl.alt}
+            ///>
+      // </div>
+     //);
+   //}
+ //}
+
+ //ReactDOM.render(
+  //<Owl />,
+   //document.getElementById('app')
+ //);
+// ===============================================
+// ======== Put Logic in a Render Function =======
+// ===============================================
+
+
+   const friends = [
+   {
+     title: "Yummmmmmm",
+     src:
+     "./cake.jpg"
+   },
+  {
+     title: "Hey Guys! Wait Up!",
+    src:
+    "./fox.jpg"
+   },
+   {
+     title: "Yikes",
+     src:
+     "./hoteljpg"
+  }
+ ];
+
+// New component class starts here:
+class Friends extends React.Component{
+  render() {
+let friend=friends[1]
+  return(
+    <div>
+    <h1>{friend.title}</h1>
+    <img src={friend.src} />
+      
+    </div>
+  );
+  }
+}
+ReactDOM.render(
+  <Friends />,
+   document.getElementById('app')
+ );
+// ===============================================
+// ======== Use a Conditional in a Render Function
+// ===============================================
+
+  
+ //const fiftyfifty = Math.random() < 0.5 ? true : false;
+
+
+//class TonightsPlan extends React.Component{
+ // render(){
+ // let task;
+//if (fiftyfifty===true){
+//  task = "Tonight I'm going out WOOO"
+//}else {
+ // task = "Tonight I'm going to bed WOOO"
+//}
+ // return <h1>{task}!</h1>
+
+  //}
+//}
+//ReactDOM.render(<TonightsPlan />,
+//document.getElementById('app')
+//);
+// ===============================================
+// ======== Use a this in a Component
+// ===============================================
+
+
+
+ //class MyName extends React.Component {
+//get name(){
+//  return 'Cody'
+//}
+ //render() {
+ //return <h1>My name is {this.name}.</h1>;
+// }
+// }
+// ReactDOM.render(<MyName />, document.getElementById('app'));
+
+
+
+// ===============================================
+// ======== Use an Event Listener in a Component
+// ===============================================
+
+
+ //class Button extends React.Component {
+   //scream() {
+//  alert('AAAAAAAAHHH!!!!!');
+//   }
+//   render() {
+  //  return (
+  //  <button onClick={this.scream}>AHHH
+  //  </button>
+ //  );
+ //  }
+// }
+// ReactDOM.render(<Button />, document.getElementById('app'));
+
+</script>
+
+</body>
+
+</html>
